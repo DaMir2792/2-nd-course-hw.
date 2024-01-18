@@ -1,0 +1,94 @@
+* {margin: 0;
+padding: 0;}
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+a {text-decoration: none;}
+.center {padding-left: calc(50% - 600px);
+    
+padding-right: calc(50% - 600px);}
+.top {
+    height: 1024px;
+background-image: url(img/bg.png);
+background-repeat: no-repeat;
+background-size: cover;
+&__content {padding-top: 218px;
+flex-shrink: 0;}
+&__title {max-width: 760px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+margin-bottom: 32px;}
+&__info{
+    max-width: 481px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal; /* 177.778% */
+    margin-bottom: 44px;
+    }
+&__info__span {color: #da5959;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;}
+&__button {border-radius: 30px;
+    background: #9C0332;
+    width: 234.063px;
+    height: 48.603px;
+    flex-shrink: 0;
+    color: #FFF;
+
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+border:none ;
+cursor: pointer;}
+}
+
+.content {padding-top: 128px;
+    display: flex;
+    flex-direction: row;
+    background-color: #000915;
+gap: 32px;
+flex-wrap: wrap;
+padding-bottom: 129px;
+&__item {width: 377px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+position: relative;
+}
+&__img {width: 100%;
+    align-self: flex-start;
+}
+&__info {display: flex;
+    width: 100%;
+    height: 31.639px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0; position: absolute;
+    bottom: 32px;
+    left: 32px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+color: #FFF;
+box-sizing: border-box;
+
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 133.333% */}
+
+}
