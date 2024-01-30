@@ -12,6 +12,7 @@ padding-right: calc(50% - 600px);}
 background-image: url(img/bg.png);
 background-repeat: no-repeat;
 background-size: cover;
+background-position: center;
 &__content {padding-top: 218px;
 flex-shrink: 0;}
 &__title {max-width: 760px;
@@ -89,5 +90,37 @@ font-size: 24px;
 font-style: normal;
 font-weight: 600;
 line-height: 32px; /* 133.333% */}
+
+}
+
+.game {padding-top: 128px;
+    display: flex;
+    flex-direction: row;
+    background-color: #000915;
+gap: 125px;
+flex-wrap: wrap;
+padding-bottom: 129px;
+&__item{display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+max-width: 584px;
+padding-top: 282px;}
+&__title {color: #FFF;
+
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;}
+&__info {color: #FFF;
+
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px; /* 177.778% */}
+&__item_1 {display: none;}
+
 
 }
