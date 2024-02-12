@@ -1,0 +1,115 @@
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+ .top {height: 735px;
+  &__content {display: flex;
+    flex-direction: column;
+    align-items: center;}
+&__title {color: #FFF;
+  min-width: 343px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+margin-bottom: 32px;}
+&__info {color: #FFF;
+
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 22px; /* 157.143% */
+margin-bottom: 32px;}
+&__info__span {color: #FFF;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;}
+}
+
+
+.game {display: flex;
+  flex-direction: column;
+  background-color: #000915;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  &__title {color: #FFF;
+    min-width: 343px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__info {color: #FFF;
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px; /* 157.143% */
+  }
+  &__item {display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    max-width: 375px;
+    padding-top: 51px;}
+  &__item_big {display: none;}
+  &__item_1 {display: block;}
+  
+}
+
+
+
+
+.game-second {display: flex;
+  background-color: #000915;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-top: 0px;
+  &__title {color: #FFF;
+    min-width: 343px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__info {color: #FFF;
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px; /* 157.143% */
+  }
+  &__item {display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    max-width: 375px;
+    padding-top: 51px;}
+  &__item_big {display: none;}
+  &__item_1 {display: block;}
+  
+}
+
+}
+
+
+
+
+
