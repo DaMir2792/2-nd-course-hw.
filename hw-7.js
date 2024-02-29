@@ -4,11 +4,11 @@ console.log(str.toLocaleUpperCase());
 
 
 /*второе без функции*/
-const ar= ['бананы', "мандаринины", "черешня", "банановые чипсы", "арбузы"];
-const brr= "банан";
-ar.forEach((crr) => {
-    if (crr.toLocaleLowerCase().includes(brr.toLocaleLowerCase())) {
-        alert (crr)
+const arrFruits= ['бананы', "мандаринины", "черешня", "банановые чипсы", "арбузы"];
+const fruit= "банан";
+arrFruits.forEach((findFruit) => {
+    if (findFruit.toLocaleLowerCase().includes(fruit.toLocaleLowerCase())) {
+        alert (findFruit)
         
     }
     
@@ -25,15 +25,15 @@ const result = funcarr(arr, check);
 console.log(result); 
 
 /*третье задание */
-let numbi = 32.58884;
-console.log(`До меньшего целого числа ${Math.floor(numbi)}`);
-console.log(`До большего целого числа ${Math.round(numbi)}`);
-console.log(`До ближайшего целого числа ${Math.ceil(numbi)}`);
+let numb = 32.58884;
+console.log(`До меньшего целого числа ${Math.floor(numb)}`);
+console.log(`До большего целого числа ${Math.round(numb)}`);
+console.log(`До ближайшего целого числа ${Math.ceil(numb)}`);
 
 
 // /*четвертое задание*/
-let numbarr=[ 52, 53, 49, 77, 21, 32]
-console.log(`Самое больше число ${Math.max(...numbarr)}, Самое маленькое число ${Math.min (...numbarr)}` );
+let numbArr=[ 52, 53, 49, 77, 21, 32]
+console.log(`Самое больше число ${Math.max(...numbArr)}, Самое маленькое число ${Math.min (...numbArr)}` );
 
 /*пятое задание*/
 const numbFun = () => {
