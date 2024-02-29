@@ -1,6 +1,6 @@
 /*ДЗ*/
 /*первое задание*/
-const mil = (a , b) => {
+const dif = (a , b) => {
     if (a < b) {
       return a;
     } else {
@@ -8,8 +8,8 @@ const mil = (a , b) => {
     }
   }
   
-  alert(mil(8,4));
-  alert(mil(6,6));
+  alert(dif(8,4));
+  alert(dif(6,6));
 
 
 /*первое задание с плавающими вводными*/
@@ -29,56 +29,46 @@ const wil = () => {
 
 
   /*второе задание*/
-  const evenOdd = () => {
-    let numb=Number (prompt("введите число"));
-    if (numb % 2 === 0) {
+  const evenOdd = (a) => {
+    if (a % 2 === 0) {
         return "число четное";
     } else {
     return "число нечетное"}
     }
 
-alert (evenOdd());
+console.log (evenOdd(4));
 
 /*3.1 задание*/
-function squarNumber() {
-  let numInput = Number(prompt("Введите число:"));
-  let result = numInput ** 2;
-  alert(`Квадрат числа равен ${result}`);
+function squarNumber(b) {
+  let result = b ** 2;
+  console.log(`Квадрат числа равен ${result}`);
 }
 
-squarNumber();
+console.log (squarNumber(4));
 
 /*3.2 задание*/
-function calcSquare(numbbb) {
-  return numbbb ** 2;
+function calcSquare(numb) {
+  return numb ** 2;
 }
 
 let squareResult = calcSquare(5);
-alert(`Квадрат числа  ${squareResult}`);
+console.log(`Квадрат числа  ${squareResult}`);
 
 
 
 /*задание четвертое*/
-"use strict";
+const printMessage = () => {
 let age = prompt("Сколько Вам лет?", 18);
+if (age < 0) {
+    alert ("Вы ввели неправильное значение")    
+}
+else if (age > 0 && age <= 12) {
+    alert("Привет,друг!");
+}else {
+alert ("Добро пожаловать")}
 
-let printMessage;/*объявляем переменную снаружи*/
-
-// в зависимости от условия объявляем функцию
-if (age < 13) {/*здесь задаем условия для срабатывания*/
-
-    printMessage = function () {/*объявляем что printMessage присваем к function*/
-        alert("Привет!");
-    }
-
-} else {
-
-    printMessage = function () {
-        alert("Добро пожаловать");
-    }
 
 }
-
 printMessage();
 
 /*задание пятое*/
@@ -109,38 +99,35 @@ function cubeNumb() {
   return `${inputNumb} в кубе равняется ${result}`;
 }
 
-for (let i = 0; i <= 10; i++) {
-  if (i === 5) {/*это я добавил чтобы остановилась после 5 итерации*/
-    break;
-  }
+
   alert(cubeNumb());
-}
 
 
 /*седьмое задание*/
+const getArea = () => {
+    return Math.PI * circle1.radius * circle1.radius; 
+    
+}
+
+const getPerimeter = () => {
+    return 2 * Math.PI * circle1.radius; 
+    
+}
 let circle1 = {
   radius: 16, 
   
-  getArea: function() {
-    return Math.PI * this.radius * this.radius; 
-  },
+  getArea: getArea,
   
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius; 
-  }
+  getPerimeter: getPerimeter
 };
 
 
 let circle2 = {
   radius: 27, 
   
-  getArea: function() {
-    return Math.PI * this.radius * this.radius; 
-  },
+  getArea: getArea,
   
-  getPerimeter: function() {
-    return 2 * Math.PI * this.radius; 
-  }
+  getPerimeter: getPerimeter
 };
 
 let area1 = circle1.getArea(); 
