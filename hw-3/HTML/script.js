@@ -35,7 +35,10 @@ function buttonFunction() {
     const first = prompt('Чему равнялся первый элемент массива?');
     const second = prompt('Чему равнялся последний элемент массива?');
   
-    if (first.toLowerCase() === randomWords[0].toLowerCase() && second.toLowerCase() === randomWords[randomWords.length - 1].toLowerCase()) {
+     if (first === null || second === null) {
+      alert('ввод отменен');
+      
+    } else if (first.toLowerCase() === randomWords[0].toLowerCase() && second.toLowerCase() === randomWords[randomWords.length - 1].toLowerCase()) {
       alert('Поздравляю, вы угадали оба элемента!');
     } else if (first.toLowerCase() === randomWords[0].toLowerCase() || second.toLowerCase() === randomWords[randomWords.length - 1].toLowerCase()) {
       alert('Вы были близки к победе!');
