@@ -12,20 +12,7 @@ const dif = (a , b) => {
   alert(dif(6,6));
 
 
-/*первое задание с плавающими вводными*/
-const wil = () => {
-    let num1 = Number(prompt("Введите первое число"));
-    let num2 = Number(prompt("Введите второе число"));
-    if (num1 > num2) {
-      alert("Первое число больше");
-    } else if (num1 < num2) {
-      alert("Второе число больше");
-    } else {
-      alert("Числа равны");
-    }
-  }
-  
-  wil();
+
 
 
   /*второе задание*/
