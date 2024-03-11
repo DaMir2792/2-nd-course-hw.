@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Проект "Комменты"</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <ul id="list" class="comments">
+        <li class="comment">
+          <div class="comment-header">
+            <div>Глеб Фокин</div>
+            <div>12.02.22 12:18</div>
+          </div>
+          <div class="comment-body">
+            <div class="comment-text">
+              Это будет первый комментарий на этой странице
+            </div>
+          </div>
+          <div class="comment-footer">
+            <div class="likes">
+              <!-- лайки лайки, лаечки -->
+              <span class="likes-counter">3</span>
+              <button class="like-button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="comment">
+          <div class="comment-header">
+            <div>Варвара Н.</div>
+            <div>13.02.22 19:22</div>
+          </div>
+          <div class="comment-body">
+            <div class="comment-text">
+              Мне нравится как оформлена эта страница! ❤
+            </div>
+          </div>
+          <div class="comment-footer">
+            <div class="likes">
+              <span class="likes-counter">75</span>
+              <button class="like-button -active-like"></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="add-form" id="form">
+        <input
+          id="add-form-name"
+          type="text"
+          class="add-form-name"
+          placeholder="Введите ваше имя"
+        />
+        <textarea
+          id="add-form-text"
+          type="textarea"
+          class="add-form-text"
+          placeholder="Введите ваш коментарий"
+          rows="4"
+        ></textarea>
+        <div class="add-form-row">
+          <button id="add-form-button" class="add-form-button">Написать</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    .error {
+      background-color: rgb(209, 108, 108);
+    }
+  </style>
+
+  <script>
+    "use strict";
+    // Код писать здесь
+    console.log("It works!");
+    //определение переменных и привязка
+    const buttonElement = document.getElementById("add-form-button");
+    const nameInputElement = document.getElementById("add-form-name");
+    const textInputElement = document.getElementById("add-form-text");
+    const listElement = document.getElementById("list");
+    // Валидация имени
+    buttonElement.addEventListener("click", () => {
+      nameInputElement.classList.remove("error");
+      textInputElement.classList.remove("error");
+
+      if (nameInputElement.value === "") {
+        nameInputElement.classList.add("error");
+        return;
+      }
+      // Валидация заполнености текстового поля
+      textInputElement.classList.remove("error");
+      if (textInputElement.value === "") {
+        textInputElement.classList.add("error");
+        return;
+      }
+      // функция для определения текущей даты
+      let date = new Date();
+      const datefunc = (date) => {
+        return (date = `${date.getDate()}.${date
+          .getMonth()
+          .toString()
+          .padStart(2, "0")}.${date
+          .getFullYear()
+          .toString()
+          .slice(-2)} ${date.getHours()}:${date
+          .getMinutes()
+          .toString()
+          .padStart(2, "0")}`);
+      };
+      //вывод коммента
+      const oldListHTML = listElement.innerHTML;
+      listElement.innerHTML =
+        oldListHTML +
+        `<li class="comment">
+          <div class="comment-header">
+            <div>${nameInputElement.value}</div>
+            <div>${datefunc(date)}</div>
+          </div>
+          <div class="comment-body">
+            <div class="comment-text">
+              ${textInputElement.value}
+            </div>
+          </div>
+          <div class="comment-footer">
+            <div class="likes">
+              <span class="likes-counter">0</span>
+              <button class="like-button"></button>
+            </div>
+          </div>
+        </li>`;
+      nameInputElement.value = ""; //очистка после заполнения
+      textInputElement.value = ""; //очистка после заполнения
+    });
+  </script>
+</html>
